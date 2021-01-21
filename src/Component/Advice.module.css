@@ -1,0 +1,105 @@
+
+.Card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    width: 500px;
+    height: 200px;
+    padding: 2%;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 30px 30px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    backdrop-filter: blur(20px);
+    -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.1));
+    transition: 0.5s;
+    transition-property: background, box-shadow;
+}
+
+.Heading{
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: 20px;
+    /* height: 580px; */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.Btn{
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 15px 15px;
+    width: 30%;
+    opacity: 1;
+    background-color: #fff;
+    border: 2px solid hsl(0, 39%, 68%) ;
+}
+
+.Btn span{
+    color:hsl(0, 0%, 25%);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+}
+.Btn:hover{
+    animation: rotate 0.7s ease-in-out both;
+}
+
+.Btn span:hover{
+    animation: storm 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    25%{
+        transform: rotate(3deg) translate3d(0, 0, 5px);
+    }
+    50%{
+        transform: rotate(9deg) translate3d(0, 0, -3px);
+    }
+    75%{
+        transform: rotate(12deg) translate3d(0, 0, 1px);
+    }
+    100%{
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+}
+
+@keyframes storm {
+    0%{
+        transform: translate3d(0, 0, 0)  translateZ(2px, 0, 0);
+    }
+    25%{
+        transform: translate3d(4px, 0, 0)  translateZ(0, -4px, 0);
+    }
+    50%{
+        transform: translate3d(-3px, 0, 0)  translateZ(0, 5px, 0);
+    }
+    75%{
+        transform: translate3d(2, 0, 0)  translateZ(0, 3px, 0);
+    }
+    100%{
+        transform: translate3d(0, 0, 0)  translateZ(0, 0, 0);
+    }
+}
+
+@media only screen and (max-width:600px){
+  .Card{
+     width: 300px;
+  }
+}

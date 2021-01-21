@@ -1,0 +1,32 @@
+#root,html,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+.app{
+    overflow: hidden;
+    height: 100%;
+    background-color: #E4E9FD;
+    background-image: -webkit-linear-gradient(65deg, 	hsl(0, 0%, 25%)50%, 	hsl(0, 4%, 90%) 50%);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+h1{
+    font-family: Inter, Source Sans Pro, Helvetica Neue, Arial, sans-serif;
+    font-size: 4vw;
+    font-weight: 800;
+}
+
+@media only screen and (max-width:600px){
+    h1{
+        font-size: 30px;
+    }
+}
